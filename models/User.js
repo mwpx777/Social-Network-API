@@ -18,18 +18,18 @@ const UserSchema = new Schema({
         // array of _id values referencing the thought model
         {
             type: Schema.Types.ObjectId,
-            ref: 'Thoughts'
+            ref: 'Thought'
         }
     ],
            
     friends: [
         // not sure if this part is correct
+        // array of _id values referencing the user model (self referencing)
         {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
-        }
-    ],
-    // array of _id values referencing the user model (self referencing)
+            type: Schema.Types.ObjectId,
+            ref: 'Friend'
+          }
+        ]
 },
 {
     toJSON: {
@@ -45,15 +45,15 @@ UserSchema.virtual('friendCount').get(function(){
     return this.friends.length;
 });
 
-await.User.create([
+// await.User.create([
 
-]);
-await User.init();
-try {
-    await User.create({ email: 'gmail@google.com' });
-} catch (error) {
-    error.message;
-}
+// ]);
+// await User.init();
+// try {
+//     await User.create({ email: 'gmail@google.com' });
+// } catch (error) {
+//     error.message;
+// }
 
 const User = model('User', UserSchema)
 

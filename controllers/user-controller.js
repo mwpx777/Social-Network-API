@@ -5,8 +5,9 @@ const userController = {
         User.find({})
             .populate({
                 path: 'thoughts',
-                // select: 
+                select: '-_v'
             })
+            .select('-__v')
             .then(dbUserData => res.json(dbUserData))
             .catch(err => {
                 console.log(err);
@@ -18,8 +19,9 @@ const userController = {
         User.findOne({ _id: params.id })
             .populate({
                 path: 'thoughts',
-                // select:
+                select: '-_v'
             })
+            .select('-__v')
             .then(dbUserData => {
                 if (!dbUserData) {
                     res.status(404).json({ message: 'No user found with this id!' });
@@ -35,7 +37,7 @@ const userController = {
     createUser({ body }, res) {
         User.create(body)
             .then(dbUserData => res.json(dbUserData))
-            .catch(error => res.json(err));
+            .catch(err => res.json(err));
     },
     updateUser({ params, body }, res) {
         User.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true })

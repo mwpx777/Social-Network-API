@@ -10,11 +10,14 @@ app.use(express.static('public'));
 
 app.use(require('./routes'));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:3001/social-network', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/social-network', {
     useFindAndModify: false,
     useNewUrlParser: true,
-    useInifiedTopology: true
+    useUnifiedTopology: true
+    
 });
+
+
 
 mongoose.set('debug', true);
 
