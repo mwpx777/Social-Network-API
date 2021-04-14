@@ -6,6 +6,7 @@ const friendController = {
         Friend.create(body)
             .then(({ _id }) => {
                 // getting user info
+                
                 return User.findOneAndUpdate(
                     // getting userId
                     { _id: params.userId },
