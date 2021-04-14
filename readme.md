@@ -1,6 +1,6 @@
 
 
-# **E-Commerce-back-end**   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+# **Social Network API*   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ## **In this weekly challenge, we were tasked with building a back end for a social network.  We utilized Node.js, Express.js, MongoDB and Mongoose for creating this application.**
 
 ## **Table of Contents**
