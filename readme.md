@@ -35,7 +35,7 @@ Heroku
 https://dashboard.heroku.com/apps/mwpsocial-network-api
 
 YouTube walkthrough video
-https://www.youtube.com/watch?v=ivTL5UmBDSE
+https://youtu.be/hV3XPfwAW0Q
 
 
 ## **Screenshot**
