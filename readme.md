@@ -32,7 +32,7 @@ Github
 https://github.com/mwpx777/Social-Network-API
 
 Heroku
-https://dashboard.heroku.com/apps/ecommerece-back-end-mwp
+https://dashboard.heroku.com/apps/mwpsocial-network-api
 
 YouTube walkthrough video
 https://www.youtube.com/watch?v=ivTL5UmBDSE
