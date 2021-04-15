@@ -94,19 +94,17 @@ const thoughtController = {
             })
             .catch(err => res.json(err));
     },
-
-    removeThought({ params }, res) {
-        console.log({ params })
+    removeThought({ body, params }, res) {
+        console.log({ body })
         Thought.findOneAndDelete({ _id: params.id })
             .then(deletedThought => {
                 if (!deletedThought) {
                     return res.status(404).json({ message: 'No thought found with this id!' });
                 }
                 return User.findOneAndUpdate(
-                    console.log({params}),
+                    // console.log({ params }),
                     { _id: params.userId },
-
-                    { $pull: { thoughts: params.id } },
+                    { $pull: { thoughts: params.id }},
                     { new: true }
                 );
             })
@@ -119,6 +117,7 @@ const thoughtController = {
             })
             .catch(err => res.status(400).json(err));
     }
+
 };
 
 module.exports = thoughtController;
